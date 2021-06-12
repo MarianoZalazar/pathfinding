@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/mariano/Documents/repos/pathfinding/pathfinding"
+set -gx VIRTUAL_ENV "/home/mariano/Documents/pathfinding/pathfinding"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/mariano/Documents/repos/pathfinding/pathfinding"
+VIRTUAL_ENV="/home/mariano/Documents/pathfinding/pathfinding"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
