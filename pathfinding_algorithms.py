@@ -47,6 +47,8 @@ def main(win, width):
                 node.reset()
                 
             if event.type == pygame.KEYDOWN:
+                
+                #Use 'h' for A-star algorithm  
                 if event.key == pygame.K_h and start and end:
                     v.clean_grid(grid, rows)
                     for row in grid:
@@ -54,6 +56,7 @@ def main(win, width):
                             node.update_neighbors(grid)
                     algorithm.a_star(lambda: v.draw(win, grid, rows, width), grid, start, end)
                 
+                #Use 'j' for Dijkstra algorithm  
                 if event.key == pygame.K_j and start and end:
                     v.clean_grid(grid, rows)
                     for row in grid:
@@ -61,6 +64,7 @@ def main(win, width):
                             node.update_neighbors(grid)
                     algorithm.dijkstra(lambda: v.draw(win, grid, rows, width), grid, start, end)
                 
+                #Use 'k' for BFS algorithm  
                 if event.key == pygame.K_k and start and end:
                     v.clean_grid(grid, rows)
                     for row in grid:
@@ -68,6 +72,7 @@ def main(win, width):
                             node.update_neighbors(grid)
                     algorithm.bfs(lambda: v.draw(win, grid, rows, width), grid, start, end)
                 
+                #Use 'l' for DFS algorithm  
                 if event.key == pygame.K_l and start and end:
                     v.clean_grid(grid, rows)
                     for row in grid:
@@ -75,27 +80,30 @@ def main(win, width):
                             node.update_neighbors(grid)
                     algorithm.dfs(lambda: v.draw(win, grid, rows, width), grid, start, end)
                 
+                
+                #Use '1' for maze 1  
                 if event.key == pygame.K_1:
                     grid = v.get_maze(grid, width, rows, 1)
                     start = None 
                     end = None
-                    
+                
+                #Use '2' for maze 2    
                 if event.key == pygame.K_2:
                     grid = v.get_maze(grid, width, rows, 2)
                     start = None
                     end = None
-                    
+                
+                #Use '3' for maze 3    
                 if event.key == pygame.K_3:
                     grid = v.get_maze(grid, width, rows, 3)
                     start = None
                     end = None
                 
+                #Use 'c' to clean everything
                 if event.key == pygame.K_c:
                     v.clean_grid(grid, rows)
-                
-                #if event.key == pygame.K_y:
-                #    v.get_grid(grid, rows)
-                
+
+                #Use 'v' to clean only obstacles
                 if event.key == pygame.K_v:
                     v.clean_obstacles(grid, rows)
     pygame.quit()

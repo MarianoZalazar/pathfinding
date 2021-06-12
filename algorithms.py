@@ -82,11 +82,11 @@ def a_star(draw, grid, start, end):
         for neighbor in current.neighbors:
             #Get the g_score of the current Node and add 1
             #If we were working with weighted nodes, we would be adding the weight of the neighbor
-            #Because the 'weight' of every neighbor is 1 we add that
+            #Because the 'weight' of every neighbor is always 1 we add that
             temp_g_score = g_score[current] + 1
             
             #Checks if the temp_g_score is less than the g_score of the neighbor
-            #This value could be 'inf'(line 41) or another value if we visited it before hand
+            #This value could be 'inf'(line 53) or another value if we visited it before hand
             if temp_g_score < g_score[neighbor]:
                 came_from[neighbor] = current
                 g_score[neighbor] = temp_g_score
@@ -116,7 +116,7 @@ def dijkstra(draw, grid, start, end):
     ##A Priority Queue returns a value not based on the default FIFO
     ##it bases it on the 'Priority' of the value
     ##Python uses a Binary Heap Structure to do this, so every 'node'(value in this case)
-    ##works as a unity with the other to relocate itself when other node is 'pushed' or 'popped'
+    ##work as a unity with the others to relocate itself when other node is 'pushed' or 'popped'
     ##into the heap
     open_set = queue.PriorityQueue()
     
@@ -131,7 +131,8 @@ def dijkstra(draw, grid, start, end):
     ##Set the values for the Start Node
     shortest_value[start] = 0
     
-    ##We can't read a PriorityQueue so we use a hash like an aux
+    ##We can't read a PriorityQueue, it will return a PriorityQueue object
+    ##so we use a hash like an aux
     open_set_hash = {start}
     
     
