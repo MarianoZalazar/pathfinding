@@ -1,11 +1,18 @@
-Pathfinding Algorithms:
+# Welcome to a Pathfinding Visualizer project
 
-- A star
-- Dijkstra
-- BFS
-- DFS
+## Pathfinding algorithms visualizer using the most famous algorithms
 
-Controls:
+A-Star, Dijkstra’s, Depth First Search and Breadth First Search are now fully interactive using PyGame
+
+# Steps to run the project
+1. Clone the repo
+2. Install the dependencies using:
+    ```
+    pip install -r requirements.txt
+    ```
+3. Run the pathfinding_algorithms.py file to start the visualization
+
+# Controls:
 
 - Left-Click to draw start, end node and obstacles
 - Right-Click to delete nodes and obstacles
@@ -15,5 +22,5 @@ Controls:
 - k = BFS
 - l = DFS
 
-- v = clean obstacles
-- c = clean the whole grid
+- v = Clean obstacles
+- c = Clean the whole grid
