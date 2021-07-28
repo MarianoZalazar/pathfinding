@@ -1,4 +1,4 @@
-# Welcome to a Pathfinding Visualizer project
+# Welcome to a Pathfinding Visualizer project :compass:
 
 ## Pathfinding algorithms visualizer using the most famous algorithms
 
